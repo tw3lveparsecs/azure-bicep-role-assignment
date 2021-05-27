@@ -5,8 +5,6 @@ This module will create a role assignment using built-in roles or by providing y
 
 ### Example 1 - Role assignment using built-in roles
 ``` bicep
-targetScope = 'subscription'
-
 param deploymentName string = concat('roleAssignment', utcNow())
 
 module roleAssignment '../azure-bicep-role-assignment/main.bicep' = {
@@ -21,8 +19,6 @@ module roleAssignment '../azure-bicep-role-assignment/main.bicep' = {
 
 ### Example 2 - Role assignment using your own role definition id
 ``` bicep
-targetScope = 'subscription'
-
 param deploymentName string = concat('roleAssignment', utcNow())
 
 module roleAssignment '../azure-bicep-role-assignment/main.bicep' = {

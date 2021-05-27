@@ -1,5 +1,3 @@
-targetScope = 'subscription'
-
 @description('Role assignment name')
 param name string
 @description('The principal id')
