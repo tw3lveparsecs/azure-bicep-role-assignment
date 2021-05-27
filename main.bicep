@@ -2,7 +2,7 @@ targetScope = 'subscription'
 
 @description('Role assignment name')
 param name string
-@description('The principal Id')
+@description('The principal id')
 param principalId string
 @description('The builtin role for the role assignment')
 @allowed([
@@ -12,7 +12,7 @@ param principalId string
   'Custom'
 ])
 param builtinRole string
-@description('Role definition Id in format of "/providers/Microsoft.Authorization/roleDefinitions/<id>". Only required when builtin role is custom')
+@description('Role definition id in format of "/providers/Microsoft.Authorization/roleDefinitions/<id>". Only required when builtin role is custom')
 param roleDefinitionId string = ''
 
 resource role 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
