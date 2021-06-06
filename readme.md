@@ -7,12 +7,12 @@ This module will create a role assignment using built-in roles or by providing y
 ``` bicep
 targetScope = 'subscription'
 
-param deploymentName string = concat('roleAssignment', utcNow())
+param deploymentName string = 'roleAssignment${utcNow()}'
 
-module roleAssignment '../azure-bicep-role-assignment/main.bicep' = {
+module roleAssignment './main.bicep' = {
   name: deploymentName
   params: {
-    name: guid(myroleassignment)
+    name: guid('myroleassignment')
     principalId: 5a7cbf33-2f52-42b4-9e51-a1e65b3207a6
     builtinRole: 'Contributor'
   }
@@ -23,12 +23,12 @@ module roleAssignment '../azure-bicep-role-assignment/main.bicep' = {
 ``` bicep
 targetScope = 'subscription'
 
-param deploymentName string = concat('roleAssignment', utcNow())
+param deploymentName string = 'roleAssignment${utcNow()}'
 
-module roleAssignment '../azure-bicep-role-assignment/main.bicep' = {
+module roleAssignment './main.bicep' = {
   name: deploymentName
   params: {
-    name: guid(myroleassignment)
+    name: guid('myroleassignment')
     principalId: 5bd020c8-048b-4eb7-b917-e446528dd9b4
     builtinRole: 'Custom'
     roleDefinitionId: '/providers/Microsoft.Authorization/roleDefinitions/d1e64988-9f2a-451c-adbe-2cc256ceff7c'
